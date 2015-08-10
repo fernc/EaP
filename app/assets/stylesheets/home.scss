@@ -1,0 +1,375 @@
+.navbar {
+	margin-bottom: 0px;
+	border-radius: 0px;
+	background-color: white;
+}
+
+.navbar-brand {
+	padding: 0;
+	height: initial;
+}
+
+.navbar .container-fluid { 
+	padding: 5px 50px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+}
+
+.navbar-right {
+	margin-top: 15px;
+}
+
+#eap-logo {
+	height: 80px;
+}
+
+.nav > li > a {
+	color: rgb(37, 41, 50);
+}
+
+.nav > li > a:hover {
+	text-decoration: underline;
+}
+
+//Shrinking nav
+nav.navbar.shrink {
+	min-height: 35px;
+}
+
+nav.shrink a {
+	font-size: 16px;
+}
+
+.shrink .navbar-right {
+	margin-top: 0px;
+}
+
+.shrink #eap-logo {
+	height: 50px;
+}
+
+.carousel.slide {
+	margin-top: 90px;
+}
+.carousel-inner.home {
+	min-height: 400px;
+	height: 65vh;
+}
+
+.carousel-inner div {
+	height: 100%;
+}
+//Delete pictures from asset or resize picturess
+.item.first-slide {
+	background: url('L2KBJB91D6.jpg') no-repeat scroll 100% 100% / cover;
+}
+.item.second-slide {
+	background: url('AL0V4Q84GP.jpg') no-repeat scroll 100% 100% / cover;
+}
+.item.third-slide {
+	background: url('SFYRKERH4N.jpg') no-repeat scroll 100% 100% / cover;
+}
+
+.carousel-caption  h3{
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	right: 0;
+}
+
+.content {
+	display: inline-block;
+	margin-bottom: 30px;
+}
+
+.pi-benefits {
+	padding: 15px 0;
+	background-color: #252932;
+	color: #FFF;
+	
+	h1 {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+}
+
+.pi-benefits .col-md-4 {
+	text-align: center;
+}
+
+.benefit-images {
+	height: 130px;
+	margin-top: 10px;
+}
+
+.testimonials {
+	clear: both;
+	text-align: center;
+	padding-top: 20px;
+	background-color: #F56F6C;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+
+.testimonials h2 {
+	margin-bottom: 20px;
+	font-family: Montserrat;
+	font-weight: 900;
+	color: #191C21;
+}
+
+.testimonial {	
+	color: #FFF;
+}
+
+.testimonial blockquote {
+	margin: 10px 10px 0;
+	background: #252932;
+	padding: 20px 60px;
+	position: relative;
+	border: none;
+	border-radius: 8px;
+	font-style: italic;
+	color: white;
+}
+
+.testimonial blockquote:before, .testimonial blockquote:after {
+	content: "\201C";
+	position: absolute;
+	font-size: 80px;
+	line-height: 1;
+	color: #DEDEDE;
+	font-style: normal;
+}
+
+.testimonial blockquote:before {
+	top: 0;
+	left: 10px;
+}
+
+.testimonial blockquote:after {
+	content: "\201D";
+	right: 10px;
+	bottom: -.5em;
+}
+
+.testimonial .arrow {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #252932;
+	margin: 0 0 0 50px;
+}
+
+.testimonial p {
+	margin: 8px 0 0 20px;
+	text-align: left;
+}
+
+.test-dp {
+	height: 80px;
+	width: 80px;
+	margin-left: 5%;
+	margin-top: 15px;
+	background: url('https://thedisneydivadotcom.files.wordpress.com/2013/12/dug-from-up.jpg?w=225') no-repeat center center / cover;;
+	border-radius: 50%;
+}
+
+.testimonial.col-md-7 {
+	margin-top: 15px;
+}
+
+// Pricing
+
+.pricing-header {
+	text-align: center;
+}
+
+.pricing h2 {
+	margin-bottom: 30px;
+}
+
+.pricing-container {
+//  width: 300px;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  position: relative;
+}
+.pricing-container .header {
+  background: #2F2F2F;
+  color: white;
+  padding: 25px;
+  font-size: 2.5em;
+  font-weight: 300;
+  border-radius: 5px 5px 0 0;
+}
+.pricing-container .price {
+  background: #66D2AC;
+  background: linear-gradient(10deg, rgb(230, 148, 138) 30%, rgb(252, 106, 106) 80%);
+  color: white;
+  padding: 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 1.3em;
+}
+.pricing-container .price .figure {
+  font-weight: 800;
+  font-size: 1.2em;
+  margin: 0 2px;
+}
+.pricing-container .price .cent {
+  text-decoration: underline;
+}
+.pricing-container .price .frequency {
+  color: #F2F2F2;
+  text-shadow: none;
+}
+.pricing-container .itemsWrapper {
+  border: 1px solid #E6E6E6;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+  background: white;
+  box-shadow: inset 14px 0 white, inset 15px 0 #f2f2f2, inset -14px 0 white, inset -15px 0 #f2f2f2;
+}
+.pricing-container .itemsWrapper .items {
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+}
+.pricing-container .itemsWrapper .item {
+  padding: 7px;
+  text-transform: capitalize;
+}
+
+.itemsWrapper .btn.btn-primary {
+	background-color: #FA6D6D;
+	padding: 10px 25px;
+	font-weight: 700;
+	transition: 0.5s all ease;
+	border-color: white;
+}
+.itemsWrapper .btn.btn-primary:hover {
+	color: #FA6D6D;
+	background-color: #FFF;
+	border-color: #FA6D6D;
+}
+
+.pi-benefits::after, .testimonials::after {
+	content: "";
+	bottom: -50px;
+	position: absolute;
+	border-top: 50px solid #252932;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	z-index: 2;
+	right: 6%;
+	left: auto;
+}
+
+.testimonials::after {
+	left: 6%;
+	right: auto;
+	border-top: 50px solid #F56F6C;
+}
+
+footer {
+  width: 100%;
+  display: inline-block;
+  background-color: #252932;
+	margin: -10px 0;
+}
+footer .copyright {
+  width: 50%;
+  float: left;
+}
+  
+footer .copyright p {
+  padding-left: 10%;
+  color: white;
+  font-size: 0.8em;
+  line-height: 70px;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+	margin: 0;
+}
+  
+footer .social {
+	padding-right: 5%;
+  width: 30%;
+  float: right;
+}
+  
+footer .social a {
+	width:25%;
+	font-size: 1.2em;
+  float: left;
+  line-height: 70px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+footer .social a:hover {
+  background-color: #222;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+
+.linked {
+  background-color: #1E83AE;
+}
+
+.face {
+  background-color: #3D5B94;
+}
+
+.tweet {
+  background-color: #3DACDD;
+}
+
+.ig-logo {
+	background-color: #87875D;
+}
+
+#ig-icon {	
+	height: 17px;
+}
+
+// Responsive 
+
+@media (max-width: 600px) {
+
+	footer .social {
+    width: 100%;
+		padding-left: 0;
+  }
+
+	footer .social a {
+		width: 25%;
+	}
+	
+	footer .copyright p {
+    text-align: center;
+    padding: 0;
+  }
+	
+	footer .copyright {
+    width: 100%;
+  }
+	
+	footer .social {	
+		padding-right: 0;
+	}
+
+}
+
+@media (min-width: 768px) {
+
+}
