@@ -9,6 +9,25 @@
 	height: initial;
 }
 
+.alert {
+	margin-top: 20px;
+}
+// Mobile
+
+.navbar-toggle {
+	border: 1px solid black;
+}
+
+.navbar-collapse {
+	margin-top: 5px;
+}
+
+.icon-bar {
+	border: 1px solid black;
+}
+
+//End of mobile
+
 .navbar .container-fluid { 
 	padding: 5px 50px;
 	font-family: 'Montserrat', sans-serif;
@@ -16,11 +35,11 @@
 }
 
 .navbar-right {
-	margin-top: 15px;
+	margin-top: 10px;
 }
 
 #eap-logo {
-	height: 80px;
+	height: 50px;
 }
 
 .nav > li > a {
@@ -34,6 +53,7 @@
 //Shrinking nav
 nav.navbar.shrink {
 	min-height: 35px;
+	box-shadow: 0px 1px 10px #454545;
 }
 
 nav.shrink a {
@@ -49,7 +69,7 @@ nav.shrink a {
 }
 
 .carousel.slide {
-	margin-top: 90px;
+	margin-top: 60px;
 }
 .carousel-inner.home {
 	min-height: 400px;
@@ -61,29 +81,66 @@ nav.shrink a {
 }
 //Delete pictures from asset or resize picturess
 .item.first-slide {
-	background: url('L2KBJB91D6.jpg') no-repeat scroll 100% 100% / cover;
+	background: url('background-1.svg') no-repeat scroll 50% 50% / cover;
 }
 .item.second-slide {
-	background: url('AL0V4Q84GP.jpg') no-repeat scroll 100% 100% / cover;
+	background: url('banner-b2s.svg') no-repeat scroll 50% 40% / cover;
 }
+
+.second-slide .carousel-caption h3, .third-slide .carousel-caption h3 {
+	bottom: 35%;
+	text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.75);
+	text-transform: capitalize;
+	font-weight: 900;
+	letter-spacing: 5px;
+	font-size: 3.5rem;
+}
+
+.sign-up-btn {
+	position: relative;
+	top: 75%;
+	font-size: 1.3rem;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 500;
+	background: #00C06E;
+	border: 0;
+	transition: all 0.2s;
+}
+
+.sign-up-btn:hover, .sign-up-btn:focus {
+	border: 0;
+	background: #007140;
+}
+
 .item.third-slide {
-	background: url('SFYRKERH4N.jpg') no-repeat scroll 100% 100% / cover;
+	background: url('background-2.svg') no-repeat scroll 100% 100% / cover;
 }
 
 .carousel-caption  h3{
+	font-family: 'Montserrat';
 	position: absolute;
 	bottom: 10%;
 	left: 0;
 	right: 0;
+	text-transform: uppercase;
+	font-size: 2.5rem;
 }
 
-.content {
-	display: inline-block;
-	margin-bottom: 30px;
+.container-fluid {
+	padding: 0 0 30px 0;
+}
+
+.container {
+	margin-top: 65px;
+	min-height: 700px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-bottom: 30px;
 }
 
 .pi-benefits {
-	padding: 15px 0;
+	padding: 30px 10px;
 	background-color: #252932;
 	color: #FFF;
 	
@@ -91,21 +148,26 @@ nav.shrink a {
 		text-align: center;
 		margin-bottom: 30px;
 	}
+
+	.col-md-4 {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	p {
+		margin-top: 30px;
+	}
 }
 
-.pi-benefits .col-md-4 {
-	text-align: center;
-}
 
 .benefit-images {
-	height: 130px;
-	margin-top: 10px;
+	height: 100px;
+	margin-top: 15px;
 }
 
 .testimonials {
-	clear: both;
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 30px;
 	background-color: #F56F6C;
 	padding-bottom: 30px;
 	margin-bottom: 30px;
@@ -182,6 +244,8 @@ nav.shrink a {
 
 // Pricing
 
+
+
 .pricing-header {
 	text-align: center;
 }
@@ -201,7 +265,7 @@ nav.shrink a {
   color: white;
   padding: 25px;
   font-size: 2.5em;
-  font-weight: 300;
+  font-weight: 200;
   border-radius: 5px 5px 0 0;
 }
 .pricing-container .price {
@@ -242,6 +306,35 @@ nav.shrink a {
   text-transform: capitalize;
 }
 
+.try-today {
+	margin-top: 30px;
+	margin-bottom: -20px;
+	background: url("eap-trial.png") scroll no-repeat 30% 87% / cover;
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	flex-flow: row wrap;
+	text-align: center;
+}
+
+.try-today h2 {
+	font-size: 3.5rem;
+	text-shadow: 1px 1px 10px grey;	
+	flex: 1 100%;
+	font-weight: 300;
+	line-height: 1.3;
+	span {
+		font-weight: 500;
+	}
+}
+
+.try-today .sign-up-btn {
+	top: 0;
+	padding: 15px 20px; 
+}
+
 .itemsWrapper .btn.btn-primary {
 	background-color: #FA6D6D;
 	padding: 10px 25px;
@@ -257,11 +350,11 @@ nav.shrink a {
 
 .pi-benefits::after, .testimonials::after {
 	content: "";
-	bottom: -50px;
+	bottom: -30px;
 	position: absolute;
-	border-top: 50px solid #252932;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
+	border-top: 30px solid #252932;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
 	z-index: 2;
 	right: 6%;
 	left: auto;
@@ -270,7 +363,7 @@ nav.shrink a {
 .testimonials::after {
 	left: 6%;
 	right: auto;
-	border-top: 50px solid #F56F6C;
+	border-top: 30px solid #F56F6C;
 }
 
 footer {
@@ -315,7 +408,6 @@ footer .social a {
   transition: all, 0.3s;
 }
 footer .social a:hover {
-  background-color: #222;
   -moz-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
@@ -334,17 +426,44 @@ footer .social a:hover {
   background-color: #3DACDD;
 }
 
-.ig-logo {
-	background-color: #87875D;
+.g-logo {
+	background-color: #DD4B39;
 }
 
 #ig-icon {	
 	height: 17px;
 }
 
+input[type="checkbox"], input[type="radio"] {
+	margin: 5px 10px 0;
+}
+
+.form-horizontal .form-group {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+//Tutor application
+
+#new_tutor h4 {
+	margin-top: 20px;
+}
+
+.terms-label {
+	color: red
+}
+
+.terms-box:checked + .terms-label {
+	color: green;
+}
+
+
+
 // Responsive 
 
 @media (max-width: 600px) {
+
+	
 
 	footer .social {
     width: 100%;
@@ -353,6 +472,7 @@ footer .social a:hover {
 
 	footer .social a {
 		width: 25%;
+		line-height: 40px;
 	}
 	
 	footer .copyright p {
@@ -372,4 +492,124 @@ footer .social a:hover {
 
 @media (min-width: 768px) {
 
+
+	#eap-logo {
+		height: 80px;
+	}
+
+	.shrink #eap-logo {
+		height: 55px;
+	}
+
+	.container {
+		margin-top: 100px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.carousel.slide {
+		margin-top: 90px;
+	}
+
+	.carousel-caption  h3{
+		font-size: 2.5em;
+	}
+	
+	.second-slide .carousel-caption h3, .third-slide .carousel-caption h3 {
+		font-size: 3.5em;
+	}
+	
+	.pi-benefits::after, .testimonials::after {
+		bottom: -50px;
+		border-top: 50px solid #252932;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+	}
+
+	.testimonials::after {
+		border-top: 50px solid #F56F6C;
+	}
+
+	.sign-up-btn {
+		padding: 20px;
+		font-size: 1em;
+	}
+
+	.pi-benefits .col-md-4 {
+		margin-bottom: 20px;
+	}
+
+	.benefit-images {
+		height: 120px;
+	}
+
+	footer .social a {
+		background-color: #191C21;
+	}
+
+	// Footer nav
+
+	#linked {
+		color: #1E83AE;
+	}
+
+	.linked:hover {
+		background-color: #1E83AE;
+		&#linked {
+			color: white;
+		}
+	}
+
+	#fb {
+		color: #3D5894;
+	}
+
+	.face:hover {
+		background-color: #3D5B94;
+		&#fb {
+			color: white;
+		}
+	}
+
+	#tweet {	
+		color: #3DACDD;
+	}
+
+	.tweet:hover {
+		background-color: #3DACDD;
+		&#tweet {
+			color: white
+		}
+	}
+	
+	#g-plus {
+		color: #DD4B39;
+	}
+
+	.g-logo:hover {
+		background-color: #DD4B39;
+		&#g-plus {
+			color: white;
+		}
+	}
+	
+	.dropdown-menu > li > a {
+		line-height: 2;
+	}
+	
+	.try-today h2 {
+		font-size: 3.5em;
+	}
 }
+
+
+@media (min-width: 1200px) {
+	
+	.container {
+		 width: 1000px;
+	}
+	
+}
+

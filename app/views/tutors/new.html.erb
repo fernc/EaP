@@ -1,0 +1,38 @@
+<div class="full-bg tutors-pg">
+
+<div class="container">
+ <%= flash_messages %>
+
+<div align="center" class="col-md-7 col-md-offset-2">
+  <h1>Interested in joining our team?</h1>
+
+  <%= simple_form_for @tutor, :html => {:class => 'form-horizontal' } do |f| %>
+    <%= f.input :name, required: true %>
+    <%= f.input :email, required: true %>
+		<%= f.input :number, required: true, placeholder: 'XXX-XXX-XXXX', label: 'Number (ex. 416-967-1111)' %>
+		<h4>Choose highest level completed</h4>
+		<%= f.collection_radio_buttons :education, [['High-School', 'High-School'] ,['Post-Secondary', 'Post-Secondary'],['Post-Grad', 'Post-Grad'], ['OCT', 'OCT']], :first, :last %>
+		<h4>Availability <small>(Select all that apply)</small></h4>
+		<%= f.collection_check_boxes :availability, [['Monday', 'Monday'] ,['Tuesday', 'Tuesday'],['Wednesday', 'Wednesday'],['Thursday', 'Thursday'],['Friday', 'Friday'], ['Saturday', 'Saturday'], ['Sunday', 'Sunday']], :first, :last %>
+		<h4>Teachable Subjects <small>(Check all that apply)</small></h4>
+		<%= f.collection_check_boxes :subjects, [['Math', 'Math'] ,['Biology', 'Biology'],['Chemistry', 'Chemistry'],['Physics', 'Physics'],['Other', 'Other']], :first, :last %>
+		</br>
+		<h4>Attach Resume <small>in .doc, or .pdf format</small></h4>
+		<%= f.file_field :file %></br>
+    <%= f.input :message, :as => :text, label: 'Tell us about yourself, and why you would like to tutor for us'%>
+		<h5>All tutors are required to pass a criminal background check, by checking the box below you acknowledge this statement</h5>
+		<%= f.check_box :terms, value: 'true', class: 'terms-box' %>
+		<%= f.label :terms,'I Agree', class: 'terms-label' %>
+    <div class= "hidden">
+      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+    </div>
+    <div>
+      </br>
+      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
+
+</div>
+
+</div>

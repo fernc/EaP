@@ -1,0 +1,52 @@
+<% content_for :title do %>About<% end %>
+<div class="full-bg about-pg">
+<div class="container">
+
+	<h1 class="abt-header">About Us</h1>
+	<img id="fat-cat" src="http://static.fjcdn.com/comments/4970252+_2eb19ba31aa7fcd50c7f8919b1a45e72.jpg" />
+	<p>We are Easy as Pi, a tutoring company that truly believes that Math and Learning can be sweet! Our mission to give all the tools and help that students need in order to be successful. Easy as Pi tutors are not only masters of their subjects but also have developed self-sustaining study habits that have helped them in their academic careers.
+	</p>
+
+	<p>
+	We believe that gifted talent is a myth, you can learn anything, if you are willing the put in the time and effort in an effective way. Then end goal is to develop students’ study skills and make them confident in their own ability. 
+	</p>
+	
+	<p>
+		Easy as Pi Tutors are as unique as their students, with rich life and school experiences. Having trouble choosing post secondary options or just what course to take next semester? At Easy as Pi we want to mentor our students, show them opportunities that await them in school and beyond.
+	</p>
+	<p>
+		Still not sure? Book an appointment for a 1-hr free tutoring session, no hidden fees no commitment required, decide for yourself if we would make a good team. <b><%= link_to 'Contact us today', contact_path %>. Not everyone will require our services, but to those who choose to go with us we promise to make it sweet.</b>
+	</p>
+<div class="flex-map col-md-10 col-md-offset-1">
+	<div id="map"></div>
+	<div id="address">
+	<h3>3773 Ellesmere Road <br/> Toronto, Ontario</h3>
+	<h4><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (647)-909-9314</h3>
+	</div>
+</div>
+</div>
+</div>
+
+ <script>
+
+
+function initMap() {
+  var myLatLng = {lat: 43.7915315, lng: -79.1674948};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Easy As Pi Tutors'
+  });
+}
+
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+

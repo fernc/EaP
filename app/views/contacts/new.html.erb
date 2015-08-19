@@ -1,0 +1,58 @@
+<% content_for :title do %>Contact Us<% end %>
+
+<div class="full-bg contact-pg">
+	<div class="container">
+	 <%= flash_messages %>
+	
+	<div align="center" class="col-md-7 col-md-offset-2">
+		<h1>Contact Form</h1>
+
+		<%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+			<%= f.input :name, required: true %>
+			<%= f.input :email, required: true %>
+			<%= f.input :number, required: true, placeholder: 'XXX-XXX-XXXX', label: 'Number (ex. 416-967-1111)' %>
+			<h4>Availability <small>(Select all that apply)</small></h4>
+			<%= f.collection_check_boxes :availability, [['Monday', 'Monday'] ,['Tuesday', 'Tuesday'],['Wednesday', 'Wednesday'],['Thursday', 'Thursday'],['Friday', 'Friday'],['Saturday', 'Saturday'], ['Sunday', 'Sunday']], :first, :last %>
+			<%= f.input :message, :as => :text, label: 'Comments/Concerns'%>
+			<div class= "hidden">
+				<%= f.input :nickname, :hint => 'Leave this field blank!' %>
+			</div>
+			<div>
+				</br>
+				<%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+			</div>
+		<% end %>
+	</div>
+<div class="flex-map col-md-10 col-md-offset-1">
+		<div id="map"></div>
+		<div id="address">
+		<h3>3773 Ellesmere Road <br/> Toronto, Ontario</h3>
+		<h4><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (647)-909-9314</h3>
+		</div>
+	</div>
+	</div>
+</div>
+
+<script>
+
+
+function initMap() {
+  var myLatLng = {lat: 43.7915315, lng: -79.1674948};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Easy As Pi Tutors'
+  });
+}
+
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>

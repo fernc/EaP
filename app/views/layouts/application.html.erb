@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Easyaspi</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<%= favicon_link_tag 'favicon.ico' %>
-	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-</head>
-<body>
+	<html>
+		<head>
+			<title><%= content_for?(:title) ? "Easy As Pi - "+ yield(:title) : "Easy As Pi" %></title>
+			<meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Easy As Pi Tutoring" %>">
+			<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+			<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+			<%= csrf_meta_tags %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<%= favicon_link_tag 'favicon.ico' %>
+			<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
 
-<%= yield %>
+		<%= render 'layouts/nav' %>
 
-</body>
+		<%= yield %>
+
+
+		<%= render 'layouts/footer' %>
+
+	</body>
 </html>
